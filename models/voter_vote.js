@@ -1,16 +1,17 @@
 "use strict";
 
 module.exports = function(sequelize, DataTypes) {
-  var voter_vote = sequelize.define("voter", {
-    voter_vote_name: DataTypes.STRING,
-    voter_vote_id: DataTypes.INTEGER,
-    voter_vote_party: DataTypes.STRING,
-    voter_vote_district: DataTypes.INTEGER,
-    voter_vote_law_ref_id: DataTypes.INTEGER,
-    voter_vote_vote_time_period: DataTypes.INTEGER
+  var voter_vote = sequelize.define("voter_vote", {
+    voter_votes_name: DataTypes.STRING,
+    voter_votes_id: DataTypes.STRING,
+    voter_votes_party: DataTypes.STRING,
+    voter_votes_district: DataTypes.STRING,
+    voter_votes_law_ref_id: DataTypes.STRING,
+    voter_votes_vote:DataTypes.STRING,
+    voter_votes_law_time_period: DataTypes.STRING
   }, {
     // don't add the timestamp attributes (updatedAt, createdAt)
-      //timestamps: false,
+      timestamps: false,
 
     // don't delete database entries but set the newly added attribute deletedAt
     // to the current date (when deletion was done). paranoid will only work if

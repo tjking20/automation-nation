@@ -1,0 +1,54 @@
+<div id="masthead">
+  
+  <div class="container">
+    
+    <div class="masthead-pad">
+      
+      <div class="masthead-text">
+        <h2>{{this.description}}</h2>
+        <p>ID: {{this.id}}</p>
+      </div> <!-- /.masthead-text -->
+      
+    </div>
+    
+  </div> <!-- /.container --> 
+  
+</div> <!-- /#masthead -->
+
+<div class="rando_text">
+	<br>
+	<p>Please read the description to the following law <strong><em>carefully</em></strong>, and observe how your constituents voted. When you cast your vote you will close out this law and prevent any further voting on it. Please give an explanation for which way you voted.</p>
+	<br>
+
+	<div id="yes-results">Yes: --</div>
+	<div id="no-results">No: --</div>
+	<br>
+	<button data-lawRefID="{{this.name}}" data-id="{{this.id}}"class="totalVotesForBill btn btn-primary">Update results</button>
+	<br>
+	<br>
+</div>
+
+
+
+<form action="/laws/close_law/{{this.id}}?_method=PUT" method="POST"id="contact-form" class="form-horizontal">
+    <fieldset>
+        <div class="control-group">
+          <label class="control-label">How will you vote?</label>
+          <div class="controls">
+            <input type="text" class="input-large" placeholder="yes/no" name="politician_vote"></input>
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label" for="message">Additional Comments:</label>
+          <div class="controls">
+            <textarea class="span4" placeholder="It was the will of the people." name="politician_explanation"></textarea>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="reset" class="btn">Reset</button>
+        </div>
+	</fieldset>
+</form>
+

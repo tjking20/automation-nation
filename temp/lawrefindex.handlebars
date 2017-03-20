@@ -1,0 +1,33 @@
+<h1>Politician</h1>
+
+<h2>Create a new Law Reference</h2>
+
+<form action="/laws/create" method="POST">
+  <input type="text" name="law_ref_id" placeholder="Put The ID of the Law You Wish To Add a reference to"></input>
+  <br><br>
+  <input type="text" name="law_href" placeholder="Enter the href you wish to add"></input>
+  <br><br>
+  <textarea type="text" name="law_href_type" placeholder="Enter a type to the href "></textarea>
+  <br><br>
+  <input type="submit"></input>
+</form>
+
+<h2>hrefs</h2>
+
+CREATE TABLE law_references(
+  id            INTEGER      AUTO_INCREMENT NOT NULL,
+  law_ref_id    VARCHAR(20)  NOT NULL,
+  law_href      VARCHAR(400),
+  law_href_type VARCHAR(10),
+  created_at    TIMESTAMP,
+  PRIMARY KEY (id)
+  );
+
+
+<ul>
+  {{#each law_reference}}
+    <li>
+      <a href="/law/{{this.law_ref_id}}">{{this.law_href}} | {{this.law_href_type}}</a>
+    </li>
+  {{/each}}
+</ul>

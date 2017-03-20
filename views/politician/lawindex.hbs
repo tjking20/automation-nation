@@ -1,0 +1,60 @@
+
+<div id="masthead">
+  
+  <div class="container">
+    
+    <div class="masthead-pad">
+      
+      <div class="masthead-text">
+        <h2>Politician</h2>
+        <p>Create a new law</p>
+      </div> <!-- /.masthead-text -->
+      
+    </div>
+    
+  </div> <!-- /.container --> 
+  
+</div> <!-- /#masthead -->
+<br>
+<br>
+
+
+
+<form action="/laws/create_new" method="POST" id="contact-form" class="form-horizontal">
+    <fieldset>
+        <div class="control-group">
+          <label class="control-label">ID</label>
+          <div class="controls">
+            <input type="text" name="law_ref_id" class="input-large" placeholder="6-digit unique number"></input>
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label"> District ID</label>
+          <div class="controls">
+            <input type="text" name="law_district" class="input-large" placeholder="4-digit district ID"></input>
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label">Voting Period</label>
+          <div class="controls">
+            <input type="text" name="law_vote_period" class="input-large" placeholder="YYYYMM"></input>
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label">Law Name</label>
+          <div class="controls">
+            <input type="text" name="law_description" class="input-large" ></input>
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label" for="message">Additional Resources:</label>
+          <div class="controls">
+            <textarea class="span4" placeholder="Any additional resources or information for your law." name="law_resources"></textarea>
+          </div>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary btn-large">Submit</button>
+          <button type="reset" class="btn btn-large">Reset</button>
+        </div>
+    </fieldset>
+</form>

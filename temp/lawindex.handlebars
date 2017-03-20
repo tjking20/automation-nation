@@ -1,0 +1,34 @@
+<h1>Politician</h1>
+
+<h2>Create a new Law</h2>
+
+<form action="/laws/create" method="POST">
+  <input type="text" name="law_ref_id" placeholder="Put The ID of the New Law You Wish To Add"></input>
+  <br><br>
+  <input type="text" name="law_district" placeholder="Enter Your District"></input>
+  <br><br>
+  <textarea type="text" name="law_description" placeholder="Enter a Description of the Bill"></textarea>
+  <br><br>
+  <input type="text" name="law_votes_yes" placeholder="0"></input>
+  <br><br>
+  <input type="text" name="law_votes_no" placeholder="0"></input>
+  <br><br>
+  <input type="text" name="law_politician_vote" placeholder="You Can Enter Yes or No now or wait"></input>
+  <br><br>
+  <textarea type="text" name="law_politician_explanation" placeholder="Enter Your Explanation Now or Later"></textarea>
+  <br><br>
+  <input type="submit"></input>
+</form>
+
+<h2>laws</h2>
+
+
+
+
+<ul>
+  {{#each law}}
+    <li>
+      <a href="/law/{{this.law_ref_id}}">{{this.law_district}} | {{this.law_description}} | {{this.law_vote_period}} | {{this.law_votes_yes} | {{this.law_votes_no} | {{this.law_politician_vote} | {{this.law_politician_explanation}</a>
+    </li>
+  {{/each}}
+</ul>

@@ -1,0 +1,39 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+
+a {
+  color: #00B7FF; }
+
+#logo{
+	color: white;
+	font-weight: bold;
+	font-size: 20px;
+	margin: 0px;
+	padding: 0px;
+	position: relative;
+	top: 25px;
+}
+
+#footer{
+	height:50px;
+	margin:0px;
+}
+
+iframe{
+	margin-left: 30px;
+}
+
+#hide-input{
+	display:none;
+}
+
+.rando_text{
+	margin-left: 175px;
+	width: 600px;
+}
+
+#mission-wrapper{
+	width: 800px;
+	margin: 20px auto;
+}
+/*# sourceMappingURL=style.css.map */

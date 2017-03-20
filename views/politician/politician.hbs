@@ -1,0 +1,105 @@
+
+<div id="masthead">
+  
+  <div class="container">
+    
+    <div class="masthead-pad">
+      
+      <div class="masthead-text">
+        <h2>Politician</h2>
+        <p>Law Control Page</p>
+      </div> <!-- /.masthead-text -->
+      
+    </div>
+    
+  </div> <!-- /.container --> 
+  
+</div> <!-- /#masthead -->
+
+
+<div id="wrapper">
+  <div id="content">
+
+    <div class="container">
+      
+      <div class="row">
+        
+        <div class="span4">
+          <h3>Welcome back</h3>
+          
+  
+          
+          <table class="table stat-table">
+            <tbody>
+              {{#each laws}}
+                {{#if activity}}
+                  <tr>
+                    <td><span class="label label-primary">Open</span></td>
+                    <td class="full"><a href="politicians/laws/{{this.id}}">{{this.law_description}}</a></td>
+                  </tr>
+                {{/if}}
+              {{/each}}
+            </tbody>
+          </table>
+          <a href="politicians/law_create" class="btn btn-large btn-secondary">Create Law</a>&nbsp;&nbsp;
+        </div> <!-- /.span4 -->
+
+        <iframe
+          width="750"
+          height="400"
+          frameborder="solid" style="border:2px"
+          src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAxFTXkiOFtiJypMdgNVey2-08I1-SfD8Y
+            &q=Somerset+County,NJ" allowfullscreen>
+        </iframe> <!-- /.span8 -->
+        
+      </div> <!-- /.row -->
+      
+      <div class="row">
+        
+        <div class="span5">
+          
+          <h3 class="title">Voting Stats</h3>
+          
+          <div id="donut-chart" class="chart-holder"></div> <!-- /#donut-chart -->
+          
+        </div> <!-- /.span5 -->
+              
+        
+        <div class="span7">
+          
+          <h3 class="title">Closed Laws</h3>
+          
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Label</th>
+                <th>Subject</th>
+                <th>User</th>
+              </tr>           
+            </thead>
+            
+            <tbody>
+            
+              {{#each laws}}
+                {{#unless activity}}
+                  <tr>
+                    <td><span class="label label-tertiary">Closed</span></td>
+                    <td class="full">
+                      <a href="laws/law-completed/{{this.id}}">{{this.law_description}}</a>
+                    </td>
+                    <td class="who">Posted by Politician</td>
+                  </tr>
+                {{/unless}}
+              {{/each}}      
+            
+            </tbody>
+          </table>  
+        </div> <!-- /.span7 -->
+        
+      </div> <!-- /.row -->
+      
+    </div> <!-- /.container -->
+
+  </div> <!-- /#content -->
+
+</div> <!-- /#wrapper -->

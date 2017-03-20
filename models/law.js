@@ -11,7 +11,9 @@ module.exports = function(sequelize, DataTypes) {
       law_votes_no: DataTypes.INTEGER,
       law_politician_vote: DataTypes.INTEGER,
       law_politician_explanation: DataTypes.TEXT,
-      law_created_at: DataTypes.DATE
+      law_resources: DataTypes.TEXT,
+      activity: DataTypes.BOOLEAN,
+      created_at: DataTypes.DATE
   }, {
       // don't add the timestamp attributes (updatedAt, createdAt)
       timestamps: false,
@@ -31,7 +33,7 @@ module.exports = function(sequelize, DataTypes) {
       freezeTableName: true,
 
       // define the table's name
-      tableName: 'law',
+      tableName: 'laws',
 
       classMethods: {}
   });

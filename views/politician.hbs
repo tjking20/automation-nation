@@ -1,0 +1,21 @@
+<h1>{{title}}</h1>
+<p>Welcome to the {{title}} Page</p>
+
+<ul>
+    {{#each laws}}
+        <li>
+            Law Name: {{this.law_ref_id}}
+            <br>
+            <a href="politicians/laws{{this.id}}">Law ID</a>
+        </li>
+    {{/each}}
+</ul>
+
+
+<h2>Form to create a bill</h2>
+
+<form action="/politicians/create" method="POST">
+    <input type="text" name="law_ref_id" placeholder="What's the title of this bill?"/><br/>
+    <input type="text" name="law_description" placeholder="Please enter a description of what the bill is about."/><br/>
+    <input type="submit"></input>
+</form>

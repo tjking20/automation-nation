@@ -1,0 +1,68 @@
+
+<div id="masthead">
+  
+  <div class="container">
+    
+    <div class="masthead-pad">
+      
+      <div class="masthead-text">
+        <h2>{{this.description}}</h2>
+        <p>ID: {{this.id}}</p>
+      </div> <!-- /.masthead-text -->
+      
+    </div>
+    
+  </div> <!-- /.container --> 
+  
+</div> <!-- /#masthead -->
+
+<div class="rando_text">
+<p>{{law_resources}}</p>
+</div>
+
+
+<form action="/voter_votes/submit_feedback" method="POST" id="contact-form" class="form-horizontal">
+    <br>
+    <p class="rando_text">Please read the description to the following law <strong><em>carefully</em></strong>, and report which way you would like your elected official to vote.</p>
+    <fieldset>
+        <div class="control-group">
+          <label class="control-label">Your Name</label>
+          <div class="controls">
+            <input type="text" class="input-large" name="voter_votes_name"></input>
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label">Username</label>
+          <div class="controls">
+            <input type="text" name="voter_votes_id"></input>
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label">Party Affiliation</label>
+          <div class="controls">
+                <input type="text"name=" voter_votes_party"></input>
+          </div>
+        </div>
+        <div id="hide-input">
+            <input type="text" name="voter_votes_district" value="{{this.district}}"></input>
+            <input type="text" name="voter_votes_law_time_period" value="{{this.period}}"></input>
+            <input type="text" name="voter_votes_law_ref_id" value="{{this.ref_id}}"></input>
+        </div>
+         <div class="control-group">
+          <label class="control-label">How would you like your elected official to vote on this law?</label>
+          <div class="controls">
+                <input type="text" placeholder="please enter yes or no" name="voter_votes_vote"></input>
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label" for="message">Additional Comments</label>
+          <div class="controls">
+            <textarea class="span4" name="message" id="message" rows="4"></textarea>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary btn-large"> Submit</button>
+          <button type="reset" class="btn btn-large">Reset</button>
+        </div>
+</fieldset>

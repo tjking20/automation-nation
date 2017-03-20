@@ -1,0 +1,45 @@
+
+<div id="masthead">
+  
+  <div class="container">
+    
+    <div class="masthead-pad">
+      
+      <div class="masthead-text">
+        <h2>{{this.description}}</h2>
+        <p>ID: {{this.name}}</p>
+      </div> <!-- /.masthead-text -->
+      
+    </div>
+    
+  </div> <!-- /.container --> 
+  
+</div> <!-- /#masthead -->
+
+<div class="rando_text">
+{{law_resources}}
+</div>
+
+<table class="table table-bordered table-striped table-highlight">
+	<thead>
+	  <tr>
+	    <th>ID</th>
+	    <th>Law</th>
+	    <th>Yes Votes</th>
+	    <th>No Votes</th>
+	    <th>Official Vote</th>
+	  </tr>
+	</thead>
+	<tbody>
+	  <tr>
+	    <th>{{this.name}}</th>
+	    <th>{{this.description}}</th>
+	    <th>{{this.yes_votes}}</th>
+	    <th>{{this.no_votes}}</th>
+	    <th>{{this.politician_vote}}</th>
+	  </tr>
+	</tbody>
+</table>
+
+<h5 class="rando_text"> A message from your elected official:</h5>
+<p class="rando_text">{{this.politician_explanation}}</p>

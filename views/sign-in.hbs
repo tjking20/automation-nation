@@ -1,0 +1,23 @@
+<!-- this is the sign_in.handlebars file inside the users folder of the views folder
+views/users/sign_in.handlebars -->
+<form class="create-update-form" action="/users/login" method="POST">
+<div class="field">
+	<label for="userID">User ID:</label>
+	<input type="text" id="userId" name="userId" value="" placeholder="User ID" class="login user-id-field" />
+</div> <!-- /field -->
+
+<div class="field">
+	<label for="password">Password:</label>
+	<input type="password" id="password" name="password" value="" placeholder="Password" class="login password-field"/>
+</div> <!-- /password -->
+
+<div class="field">
+	<label for="password">Role:</label>
+	<input type="role" id="role" name="Role" value="" placeholder="Enter Role" class="login password-field"/>
+</div> <!-- /password -->
+
+</div> <!-- /login-fields -->
+
+  
+  <button type="submit">Sign In</button>
+</form>
